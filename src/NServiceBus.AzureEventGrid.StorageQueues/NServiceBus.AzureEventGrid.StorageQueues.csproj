@@ -10,6 +10,11 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues/develop/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
     <ItemGroup>
