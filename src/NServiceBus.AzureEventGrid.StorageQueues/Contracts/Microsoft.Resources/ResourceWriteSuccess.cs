@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using NServiceBus;
 
-    public class ResourceWriteSuccess : IEvent
+    /*public*/ class ResourceWriteSuccess : IEvent
     {
 //        public string Authorization { get; set; }
         public Dictionary<string, string> Claims { get; set; }
