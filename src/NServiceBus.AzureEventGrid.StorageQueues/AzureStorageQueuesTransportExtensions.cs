@@ -11,6 +11,7 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
 
+    /// <summary></summary>
     public static class AzureStorageQueuesTransportExtensions
     {
         internal static Func<CloudQueueMessage, MessageWrapper> unwrapper;
