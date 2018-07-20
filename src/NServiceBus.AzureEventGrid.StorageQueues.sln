@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NServiceBus.AzureEventGrid.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B725637-C6E9-410C-B388-0CEFA4BBB2D0}"
 	ProjectSection(SolutionItems) = preProject
+		..\appveyor.yml = ..\appveyor.yml
 		Directory.Build.props = Directory.Build.props
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NServiceBus.AzureEventGrid.StorageQueues.Tests", "NServiceBus.AzureEventGrid.StorageQueues.Tests\NServiceBus.AzureEventGrid.StorageQueues.Tests.csproj", "{3F6570F1-1E20-483B-8B45-60BD3DBA1150}"
