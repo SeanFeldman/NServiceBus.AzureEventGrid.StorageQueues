@@ -1,25 +1,10 @@
 ﻿namespace Microsoft.Resources
 {
-    using System.Collections.Generic;
-    using NServiceBus;
-
     /// <summary>
-    /// Raised when a resource create or update operation succeeds.
+    /// Raised when a resource create or update operation is canceled.
     /// </summary>
-    public class ResourceWriteSuccess : IEvent
+    public class ResourceWriteCancel
     {
-        /// <summary>
-        /// 	The requested authorization for the operation.
-        /// </summary>
-        public Authorization Authorization { get; set; }
-        /// <summary>
-        /// The properties of the claims. For more information, see JWT specification (http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html).
-        /// </summary>
-        public Dictionary<string, string> Claims { get; set; }
-        /// <summary>
-        /// An operation ID for troubleshooting.
-        /// </summary>
-        public string CorrelationId { get; set; }
         /// <summary>
         /// The resource provider performing the operation.
         /// </summary>

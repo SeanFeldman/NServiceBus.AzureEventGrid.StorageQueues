@@ -4,9 +4,9 @@
     using NServiceBus;
 
     /// <summary>
-    /// Raised when a resource create or update operation succeeds.
+    /// Raised when a resource delete operation succeeds.
     /// </summary>
-    public class ResourceWriteSuccess : IEvent
+    public class ResourceDeleteSuccess : IEvent
     {
         /// <summary>
         /// 	The requested authorization for the operation.
@@ -20,6 +20,10 @@
         /// An operation ID for troubleshooting.
         /// </summary>
         public string CorrelationId { get; set; }
+        /// <summary>
+        /// The details of the operation.
+        /// </summary>
+        public HttpRequest HttpRequest { get; set; }
         /// <summary>
         /// The resource provider performing the operation.
         /// </summary>
