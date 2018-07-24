@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>Azure Event Grid enabler for NServiceBus Azure Storage Queues transport</Description>
-    <Version>1.0.0-alpha0001</Version>
+    <Version>1.0.0-alpha0002</Version>
     <Authors>Sean Feldman</Authors>
     <PackageTags>Azure;Event Grid;Storage Queues;NServiceBus</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues/develop/images/project-icon.png</PackageIconUrl>
