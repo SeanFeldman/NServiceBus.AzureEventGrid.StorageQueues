@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.Text;
     using Azure.Transports.WindowsAzureStorageQueues;
-    using Microsoft.WindowsAzure.Storage.Queue;
+    using global::Microsoft.WindowsAzure.Storage.Queue;
     using Newtonsoft.Json;
     using Settings;
     using Xunit;

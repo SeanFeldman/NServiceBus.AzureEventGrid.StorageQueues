@@ -1,8 +1,8 @@
 ﻿namespace NServiceBus.AzureEventGrid.StorageQueues.Tests
 {
     using System.IO;
-    using Microsoft.Storage;
-    using Microsoft.WindowsAzure.Storage.Queue;
+    using global::Microsoft.Storage;
+    using global::Microsoft.WindowsAzure.Storage.Queue;
     using Newtonsoft.Json;
     using Settings;
     using Xunit;
