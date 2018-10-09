@@ -20,3 +20,9 @@ Available here http://nuget.org/packages/NServiceBus.AzureEventGrid.StorageQueue
 To Install from the Nuget Package Manager Console 
     
     PM> Install-Package NServiceBus.AzureEventGrid.StorageQueues
+    
+### Usage
+
+```c#
+endpointConfiguration.UseTransport<AzureStorageQueueTransport>().EnableSupportForEventGridEvents();
+```
