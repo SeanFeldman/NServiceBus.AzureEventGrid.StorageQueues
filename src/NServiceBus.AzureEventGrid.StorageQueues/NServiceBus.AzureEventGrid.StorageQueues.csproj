@@ -6,8 +6,8 @@
     <Version>1.0.0-alpha0002</Version>
     <Authors>Sean Feldman</Authors>
     <PackageTags>Azure;Event Grid;Storage Queues;NServiceBus</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues/develop/images/project-icon.png</PackageIconUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues/develop/LICENSE</PackageLicenseUrl>
+    <PackageIcon>project-icon.png</PackageIcon>
+    <PackageLicenseFile Condition="'$(PackageLicenseFile)' == ''">LICENSE.md</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SeanFeldman/NServiceBus.AzureEventGrid.StorageQueues</RepositoryUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -17,19 +17,16 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
-    <ItemGroup>
-<PackageReference Include="NServiceBus.Azure.Transports.WindowsAzureStorageQueues" Version="[8.0.0, 9.0.0)" />
+  <ItemGroup>
+    <Content Include="../../images/project-icon.png" Pack="true" PackagePath="" />
+    <None Include="..\..\$(PackageLicenseFile)" Condition="Exists('..\..\$(PackageLicenseFile)')" Pack="true" PackagePath="$(PackageLicenseFile)" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NServiceBus.Azure.Transports.WindowsAzureStorageQueues" Version="[8.2.0, 9.0.0)" />
     <PackageReference Include="Newtonsoft.Json" Version="[11.0.1, 12.0.0)" />
     <PackageReference Include="Particular.CodeRules" Version="0.2.0" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="SourceLink.Create.GitHub" Version="2.5.0" PrivateAssets="All" />
-    <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.5.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
