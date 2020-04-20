@@ -14,21 +14,16 @@
     /// <summary></summary>
     public static class AzureStorageQueuesTransportExtensions
     {
-        internal static Func<CloudQueueMessage, MessageWrapper> unwrapper;
+        internal  static Func<CloudQueueMessage, MessageWrapper> tesingUnwrapper { get; private set; }
 
         /// <summary>
         /// Allow processing of EventGrid events
         /// </summary>
         public static void EnableSupportForEventGridEvents(this TransportExtensions<AzureStorageQueueTransport> transportExtensions)
         {
-            if (unwrapper != null)
-            {
-                throw new InvalidOperationException("Message unwrapper was already specified.");
-            }
-
             var jsonSerializer = new Newtonsoft.Json.JsonSerializer();
 
-            unwrapper = cloudQueueMessage =>
+            Func<CloudQueueMessage, MessageWrapper> unwrapper = cloudQueueMessage =>
             {
                 using (var stream = new MemoryStream(cloudQueueMessage.AsBytes))
                 using (var streamReader = new StreamReader(stream))
@@ -74,6 +69,8 @@
             };
 
             transportExtensions.UnwrapMessagesWith(unwrapper);
+
+            tesingUnwrapper = unwrapper;
         }
 
         const string format = "yyyy-MM-dd HH:mm:ss:ffffff Z";

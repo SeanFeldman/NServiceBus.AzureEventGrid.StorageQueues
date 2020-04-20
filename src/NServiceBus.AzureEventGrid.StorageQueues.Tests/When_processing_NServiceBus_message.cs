@@ -24,7 +24,7 @@
 
             var transportExtensions = new TransportExtensions<AzureStorageQueueTransport>(new SettingsHolder());
             AzureStorageQueuesTransportExtensions.EnableSupportForEventGridEvents(transportExtensions);
-            var wrapper = AzureStorageQueuesTransportExtensions.unwrapper(message);
+            var wrapper = AzureStorageQueuesTransportExtensions.tesingUnwrapper(message);
 
             Assert.Equal(@event.Id, wrapper.Id);
             Assert.Equal(MessageIntentEnum.Publish, @event.MessageIntent);
@@ -32,7 +32,8 @@
         }
     }
 
-    public class SomeEvent : IEvent {
+    public class SomeEvent : IEvent
+    {
         public string Data { get; set; }
     }
 }

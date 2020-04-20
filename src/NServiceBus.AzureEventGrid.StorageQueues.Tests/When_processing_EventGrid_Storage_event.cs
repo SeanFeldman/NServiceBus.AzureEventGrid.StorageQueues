@@ -39,7 +39,7 @@
             var message = new CloudQueueMessage(@event);
             var transportExtensions = new TransportExtensions<AzureStorageQueueTransport>(new SettingsHolder());
             AzureStorageQueuesTransportExtensions.EnableSupportForEventGridEvents(transportExtensions);
-            var wrapper = AzureStorageQueuesTransportExtensions.unwrapper(message);
+            var wrapper = AzureStorageQueuesTransportExtensions.tesingUnwrapper(message);
 
             Assert.Equal("/subscriptions/<guid>/resourceGroups/<rg>/providers/Microsoft.Storage/storageAccounts/<storage-account>", wrapper.Headers["EventGrid.topic"]);
             Assert.Equal("/blobServices/default/containers/uploads/blobs/file.json", wrapper.Headers["EventGrid.subject"]);
@@ -56,7 +56,7 @@
             var message = new CloudQueueMessage(@event);
             var transportExtensions = new TransportExtensions<AzureStorageQueueTransport>(new SettingsHolder());
             AzureStorageQueuesTransportExtensions.EnableSupportForEventGridEvents(transportExtensions);
-            var wrapper = AzureStorageQueuesTransportExtensions.unwrapper(message);
+            var wrapper = AzureStorageQueuesTransportExtensions.tesingUnwrapper(message);
 
             using (var stream = new MemoryStream(wrapper.Body))
             using (var streamReader = new StreamReader(stream))

@@ -3,10 +3,6 @@
     using System;
     public class InitializeStaticsFixture : IDisposable
     {
-        public InitializeStaticsFixture()
-        {
-            AzureStorageQueuesTransportExtensions.unwrapper = null;
-        }
         public void Dispose()
         {
         }
